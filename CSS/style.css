@@ -317,6 +317,7 @@ li img {
 
 .comp-head h1 {
   font-size: large;
+  text-transform: uppercase;
 }
 
 .comp-cont {
@@ -324,6 +325,7 @@ li img {
   /* padding: ; */
   font-size: 12px;
   line-height: 19px;
+  text-align: justify;
 }
 
 .comp-row {
@@ -364,6 +366,12 @@ li img {
 
 
 /* Who will  */
+
+/* #who-will {
+  background-image: url('../img/bg-3.png');
+  background-color: rgb(0,0,0,0.7);
+  background-blend-mode: multiply;
+} */
 
 #who-will ul {
   /* background: linear-gradient(180deg, #012027 0%, #011827 100%); */
