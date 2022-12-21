@@ -14,6 +14,7 @@ html {
 
 body {
   transition: 0.5s ease;
+  background: black;
 }
 
 a {
@@ -1500,4 +1501,101 @@ a {
     font-size: 1.1rem;
   }
 
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  z-index: 9999999;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Bazar';
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.no-js #preloader,
+.oldie #preloader {
+  display: none;
+}
+
+#loader video {
+  width: 100vw;
+  height: 100vh;
+  max-width: 800px;
+}
+
+#loader svg {
+  display: block;
+  font: 150px 'Bazar';
+  width: 100vw;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* Main stuff */
+.text--transparent {
+  fill: transparent;
+}
+
+.anim-shape {
+  -webkit-transform-origin: 0x 150px;
+  transform-origin: 0x 150px;
+  -webkit-transform: scale(0, 1) translate(0, 0);
+  transform: scale(0, 1) translate(0, 0);
+  -webkit-animation: moving-panel 3s infinite alternate;
+  animation: moving-panel 3s infinite alternate;
+}
+
+.colortext .anim-shape:nth-child(1) {
+  fill: #F14F04;
+}
+
+.colortext .anim-shape:nth-child(2) {
+  fill: #D23103;
+}
+
+.colortext .anim-shape:nth-child(3) {
+  fill: #9B1901;
+}
+
+.colortext .anim-shape:nth-child(4) {
+  fill: #552026;
+}
+
+.colortext .anim-shape:nth-child(5) {
+  fill: #8D1801;
+}
+
+.shadow {
+  -webkit-transform: translate(10px, 10px);
+  transform: translate(10px, 10px);
+}
+
+.anim-shape--shadow {
+  fill: #000;
+  fill-opacity: .2;
+}
+
+@-webkit-keyframes moving-panel {
+  100% {
+    -webkit-transform: scale(1, 1) translate(20px, 0);
+    transform: scale(1, 1) translate(20px, 0);
+  }
+}
+
+@keyframes moving-panel {
+  100% {
+    -webkit-transform: scale(1, 1) translate(20px, 0);
+    transform: scale(1, 1) translate(20px, 0);
+  }
+}
+
+.content {
+  font: 800 14.5em/1 'Open Sans', Impact;
 }
