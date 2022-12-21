@@ -182,6 +182,7 @@ li img{
 
 .abo-main{
   padding: 60px 10px;
+  padding-bottom: 0;
 }
 
 .abo-img .gear-img {
@@ -414,7 +415,7 @@ li img{
   padding: 5% 35%;
 }
 .exh-map img{
-  width: 95%;
+  width: 90%;
 }
 
 @media(max-width:900px){
@@ -942,7 +943,7 @@ li img{
 
 .footer {
   background-color: black;
-  padding: 100px 0;
+  padding: 50px 0;
   color: white;
   text-align: center;
   font-size: x-large;
@@ -1008,6 +1009,8 @@ li img{
 @media(max-width:640px){
   .contact div{
     flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25%;
   }
   .contact p{
     /* text-align: center; */
@@ -1023,7 +1026,7 @@ li img{
     /* flex-direction: column; */
   }
   .footer{
-    padding: 70px 0;
+    padding: 40px 0;
   }
  
 }
@@ -1394,7 +1397,9 @@ a {
 
 .pri-box{
   margin: 20px 5%;
-  width: 250px;
+  width: 20vw;
+  max-width: 350px;
+  min-width: 250px;
   align-items: flex-start;
   padding: 30px 10px;
 }
@@ -1414,7 +1419,8 @@ a {
 .pri-line{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 .pri-line img{
@@ -1426,6 +1432,7 @@ a {
 .pri-line p{
   font-size: 18px;
   color: white;
+  width: max-content;
 }
 
 @media only screen and (max-width: 768px) {
