@@ -9,6 +9,10 @@
   /* background-color: #891502; */
 }
 
+#home {
+  overflow: visible;
+}
+
 .navbar.sticky {
   box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
   backdrop-filter: blur(20px);
@@ -106,6 +110,7 @@ body {
   min-height: 100vh;
   /* position: absolute;
   top: 0; */
+  overflow: visible;
 }
 /* .hp-bg{ */
   /* height: auto;  */

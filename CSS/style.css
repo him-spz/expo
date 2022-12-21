@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: visible !important;
 }
 
 html {
@@ -24,17 +25,20 @@ li {
   /* display: list-item; */
   margin-left: 1em;
 
-  }
-li img{
+}
+
+li img {
   width: 7px;
   background-color: white;
 }
+
 .common {
   position: relative;
   max-width: 1250px;
   min-height: 100vh;
   margin-left: auto;
   margin-right: auto;
+  overflow: visible;
 }
 
 .card {
@@ -49,9 +53,10 @@ li img{
 }
 
 
-.for-bg{
+.for-bg {
   background: linear-gradient(180deg, #012027 0%, #011827 100%);
 }
+
 /* Events CSS  */
 
 #Events {
@@ -165,11 +170,13 @@ li img{
   /* background-color: #391F14; */
   /* background: linear-gradient(180deg, #012027 0%, #011827 100%); */
   padding: 10px 0px;
+  overflow: visible;
 }
 
 .abo {
   display: flex;
   /* position: relative; */
+  overflow: visible;
 }
 
 .gear img {
@@ -180,9 +187,10 @@ li img{
   display: flex;
 }
 
-.abo-main{
+.abo-main {
   padding: 60px 10px;
   padding-bottom: 0;
+  overflow: visible;
 }
 
 .abo-img .gear-img {
@@ -221,28 +229,32 @@ li img{
   line-height: 180.5%;
 }
 
-.abo-btn{
+.abo-btn {
   display: flex;
   justify-content: center;
   /* height: 80px;
   width: 100px; */
   margin-bottom: 20px;
+  overflow: visible;
 }
-.abo-btn a{
-  color: #1381E2;
-  font-weight: 700;
-  font-size: 18px;
-  /* line-height: 60px; */
-}
-.abo-btn button{
+
+.abo-btn button {
   background: rgba(217, 217, 217, 0.85);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(20, 134, 228, 0.54);
   border-radius: 15px;
-
-  
   height: 60px;
   width: 150px;
+  color: #1381E2;
+  font-weight: 700;
+  font-size: 18px;
+  transition: 0.2s all;
 }
+
+.abo-btn button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
 /* .abo-row {
   display: flex;
   justify-content: space-around;
@@ -265,9 +277,10 @@ li img{
 /* Competiton Style  */
 #competition {
   color: white;
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   overflow: hidden;
+  padding: 50px 0;
   /* background: linear-gradient(180deg, #012027 0%, #011827 100%); */
 }
 
@@ -278,7 +291,9 @@ li img{
   height: 320px;
   width: 270px;
   flex-direction: column;
-  background: radial-gradient(100% 100% at 28.98% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  background: radial-gradient(100% 100% at 28.98% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
   /* Note: backdrop-filter has minimal browser support */
@@ -286,6 +301,7 @@ li img{
   border-radius: 20px;
   transition: 0.2s all;
   margin: 10%;
+  justify-content: space-around;
 }
 
 .comp-card:hover {
@@ -298,71 +314,84 @@ li img{
   font-size: 13px;
   padding: 4% 0;
 }
-.comp-cont{
+
+.comp-head h1 {
+  font-size: large;
+}
+
+.comp-cont {
   font-family: 'Roboto';
   /* padding: ; */
   font-size: 12px;
   line-height: 19px;
 }
+
 .comp-row {
   /* display: flex;
   justify-content: space-around;
   margin: 50px 35px;
   overflow-x: visible; */
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   /* text-align: center; */
   place-items: center;
   /* justify-content: center;
   align-items: center; */
-  margin: 10px 10px;
-  padding: 60px 10px;
+  margin: 0 10px;
+  padding: 0 10px;
+  overflow: visible;
 }
 
 
 
-@media(max-width:900px){
-  .comp-row{
-    grid-template-columns: repeat(2,1fr);
+@media(max-width:900px) {
+  .comp-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-@media(max-width:480px){
-  #competition{
-    padding: 0;
+
+@media(max-width:480px) {
+  #competition {
+    padding: 50px 0;
   }
-  .comp-row{
+
+  .comp-row {
     margin: 20px 30px;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-  
+
 
 /* Who will  */
 
-#who-will ul{
+#who-will ul {
   /* background: linear-gradient(180deg, #012027 0%, #011827 100%); */
   /* list-style-type: disc; */
 }
-.who{
+
+.who {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   color: white;
-  
+
 }
-.who-img{
+
+.who-img {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 20px;
 }
-.who-heading{
+
+.who-heading {
   width: 100%;
   line-height: 40px;
   font-family: Poppins;
 }
-.who-content{
+
+.who-content {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,21 +399,24 @@ li img{
   margin: 20px;
   line-height: 21px;
 }
-.who-img img{
+
+.who-img img {
   width: 69%;
-  
+
 }
-.who-content h1{
+
+.who-content h1 {
   font-size: 36;
 }
 
-@media(max-width:480px){
-  .who{
+@media(max-width:480px) {
+  .who {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .who-heading{
+
+  .who-heading {
     text-align: center;
   }
 }
@@ -395,10 +427,11 @@ li img{
 
 
 /* exhibition map  */
-#exh-map{
+#exh-map {
   /* background: linear-gradient(180deg, #05152C 0%, #06101A 100%); */
 }
-.exh-map{
+
+.exh-map {
   /* background: radial-gradient(100% 100% at 28.98% 0%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%) warning: gradient uses a rotation that is not supported by CSS and may not behave as expected; */
   box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(20px);
@@ -414,61 +447,69 @@ li img{
   align-items: center;
   padding: 5% 35%;
 }
-.exh-map img{
+
+.exh-map img {
   width: 90%;
 }
 
-@media(max-width:900px){
-  .exh-map{
+@media(max-width:900px) {
+  .exh-map {
     padding: 5% 25%;
   }
 }
-@media(max-width:480px){
-  .exh-map{
+
+@media(max-width:480px) {
+  .exh-map {
     padding: 5% 0%;
   }
 }
+
 /* .exh-img img{
   width: 100%;
 } */
 
 
 /* Terms and conditions  */
-#tnc{
+#tnc {
   background: url(../img/tnc-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-.tnc{
+
+.tnc {
   font-family: 'Roboto';
   margin: 10%;
-  
+
 }
-.tnc-cont{
+
+.tnc-cont {
   color: white;
   text-transform: uppercase;
   font-size: 18px;
   line-height: 30px;
 }
-.tnc-cont li{
+
+.tnc-cont li {
   list-style: disc;
 }
 
-.tnc-cont p{
+.tnc-cont p {
   margin: 15px 10px;
 }
 
 
-@media(max-width:480px){
-  .tnc{
+@media(max-width:480px) {
+  .tnc {
     margin: 5%;
   }
-  .tnc-cont{
+
+  .tnc-cont {
     font-size: 14px;
     line-height: 28px;
   }
-  .heading{
+
+  .heading {
     margin: 0 3%;
     margin-bottom: 15px;
     /* font-size: 1.5rem; */
@@ -1006,29 +1047,33 @@ li img{
   margin: auto;
   margin-bottom: 20px;
 }
-@media(max-width:640px){
-  .contact div{
+
+@media(max-width:640px) {
+  .contact div {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 25%;
   }
-  .contact p{
+
+  .contact p {
     /* text-align: center; */
     display: flex;
     justify-content: center;
     /* align-items: center; */
   }
 }
-@media(max-width:480px){
-  .contact{
+
+@media(max-width:480px) {
+  .contact {
     padding: 25px 0;
-    
+
     /* flex-direction: column; */
   }
-  .footer{
+
+  .footer {
     padding: 40px 0;
   }
- 
+
 }
 
 /* .ellipse{
@@ -1223,7 +1268,7 @@ a {
 }
 
 .popup-modal .description-box p {
-  font:18px/24px "merriweather-regular", serif;
+  font: 18px/24px "merriweather-regular", serif;
   color: #2b2b2b;
   margin-bottom: 12px;
 }
@@ -1383,19 +1428,20 @@ a {
 
 /* Price Band  */
 
-#pricing{
+#pricing {
   padding: 50px 0px;
 }
 
-.pri-con{
+.pri-con {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 0px;
+  padding: 30px 0px;
+  overflow: visible;
 }
 
 
-.pri-box{
+.pri-box {
   margin: 20px 5%;
   width: 20vw;
   max-width: 350px;
@@ -1404,7 +1450,7 @@ a {
   padding: 30px 10px;
 }
 
-.pri-box hr{
+.pri-box hr {
   width: 100%;
   /* margin: 0px 0px 10px; */
   margin-bottom: 10px;
@@ -1416,34 +1462,34 @@ a {
   text-align: center;
 } */
 
-.pri-line{
+.pri-line {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   width: 100%;
 }
 
-.pri-line img{
+.pri-line img {
   width: 38px;
   height: 38px;
   margin: 0px 2% 0px 2%;
 }
 
-.pri-line p{
+.pri-line p {
   font-size: 18px;
   color: white;
   width: max-content;
 }
 
 @media only screen and (max-width: 768px) {
-  .pri-con{
+  .pri-con {
     flex-direction: column;
   }
 }
 
-@media only screen and (min-width :768px){
-  .pri-heading{
+@media only screen and (min-width :768px) {
+  .pri-heading {
     font-size: 1.1rem;
   }
-  
+
 }
