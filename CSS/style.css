@@ -31,6 +31,7 @@ li {
 li img {
   width: 7px;
   background-color: white;
+  box-shadow: 0px 0px 8px 3px rgb(50 78 154);
 }
 
 .common {
@@ -302,7 +303,7 @@ li img {
   border-radius: 20px;
   transition: 0.2s all;
   margin: 10%;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .comp-card:hover {
@@ -327,6 +328,9 @@ li img {
   font-size: 12px;
   line-height: 19px;
   text-align: justify;
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
 }
 
 .comp-row {
@@ -391,12 +395,14 @@ li img {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40%;
   margin: 20px;
 }
 
 .who-heading {
   width: 100%;
-  line-height: 40px;
+  line-height: 70px;
+  /* font-size: 48px; */
   font-family: Poppins;
 }
 
@@ -406,25 +412,31 @@ li img {
   align-items: center;
   flex-direction: column;
   margin: 20px;
-  line-height: 21px;
+  line-height: 25px;
 }
 
 .who-img img {
-  width: 69%;
+  /* width: 69%; */
 
 }
 
 .who-content h1 {
   font-size: 36;
 }
-
-@media(max-width:480px) {
+.who-content li {
+  padding-left: 20px;
+}
+@media(max-width:900px){
   .who {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-
+}
+@media(max-width:480px) {
+  .who-img {
+    width: 100%;
+  }
   .who-heading {
     text-align: center;
   }
@@ -500,7 +512,7 @@ li img {
 }
 
 .tnc-cont li {
-  list-style: disc;
+  padding-left: 20px;
 }
 
 .tnc-cont p {
@@ -1457,6 +1469,7 @@ a {
   min-width: 250px;
   align-items: flex-start;
   padding: 30px 10px;
+  border: 3px solid rgb(63, 145, 227);
 }
 
 .pri-box hr {
