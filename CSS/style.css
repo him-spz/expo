@@ -423,20 +423,24 @@ li img {
 .who-content h1 {
   font-size: 36;
 }
+
 .who-content li {
   padding-left: 20px;
 }
-@media(max-width:900px){
+
+@media(max-width:900px) {
   .who {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
+
 @media(max-width:480px) {
   .who-img {
     width: 100%;
   }
+
   .who-heading {
     text-align: center;
   }
@@ -1611,4 +1615,21 @@ a {
 
 .content {
   font: 800 14.5em/1 'Open Sans', Impact;
+}
+
+.register-button {
+  background-color: white;
+  color: #0B75D3 !important;
+  padding: 8px;
+  border-radius: 5px;
+  transition: 0.3s all;
+}
+
+.register-button:hover {
+  background-color: transparent;
+  border-bottom: 2px solid #0B75D3;
+}
+
+.navlinks ul li:last-child::after {
+  display: none;
 }
