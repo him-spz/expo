@@ -7,6 +7,7 @@
   transition: all 0.6s;
   font-weight: 800;
   /* background-color: #891502; */
+  overflow: visible;
 }
 
 #home {
@@ -26,6 +27,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   transition: all 0.6s;
+  overflow: visible;
 }
 
 nav img {
@@ -44,6 +46,7 @@ nav img {
   display: inline-block;
   padding: 8px 10px;
   position: relative;
+  overflow: visible;
 }
 
 .navlinks ul li a {
